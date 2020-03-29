@@ -11,13 +11,13 @@ UNIDEALELEMENT  CELLMISMATCH/TDCMISMATCH
 
 **03.29 UPDATE**  
 --
-**DISCRIPTION**  
+>**DISCRIPTION**  
 - [x] offline classification  
 - [x] pretrained weights in 9900model
 - [x] binarized convolution in second layer 
 - [x] hardware discription(tdc,adder,delay)
 
-**FORWORD**
+>**FORWORD**
 - [ ] separate &discribe hardware(read,write,shiftadder)
 - [ ] TESTBENCH(MLP,CNN+,selfdefined network)
 - [ ] new DATASETS(cifar10,fashionMNIST,etc.)
