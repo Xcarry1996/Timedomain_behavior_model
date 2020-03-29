@@ -1,6 +1,6 @@
 # Timedomain_behavior_model 
 
->KEYWORDS:  TDCIM  
+KEYWORDS:  TDCIM  
 TESTBENCH:  CNN  
 DATASETS:   MNIST  
 CELLTYPE:   SRAM  
@@ -9,8 +9,9 @@ UNIDEALELEMENT: CELLMISMATCH TDCMISMATCH
 
 
 **03.29 UPDATE**  
-**DISCRIPTION**: 
-* offline classification
+--
+**DISCRIPTION**:  
+* offline classification  
 * pretrained weights in 9900model
 * binarized convolution in second layer 
 * hardware discription(tdc,adder,delay)
