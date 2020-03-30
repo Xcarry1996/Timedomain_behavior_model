@@ -32,8 +32,8 @@ UNIDEALELEMENT  CELLMISMATCH/TDCMISMATCH
 **03.30 UPDATE**
 --
 - **delaytovalue（）** -> **delayquantize（）**  
-- simplify functions to **convolution3d()**  
+- simplify functions to **conv3d_cim()**  
 - cancel odd/oven delay partition. (haven't seen any necessity, except for understanding code)  
 - weight mapping method: from +1,-1 to 1,0 using rescale function.  
-- TDC: half quantize method. rescale digital number to range[0,1], and then back to delayvalue again.  
-- TDC range choise affects test accuracy.Finding different interval for delaysum's quantization is under work.
+- TDC: half quantize method. rescale digital number to range[0,1], and scale back to delaysumvalue.  
+- TDC range choise affects test accuracy, finding different interval for delaysum's quantization is under work.
