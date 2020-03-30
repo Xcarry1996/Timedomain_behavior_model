@@ -36,4 +36,4 @@ UNIDEALELEMENT  CELLMISMATCH/TDCMISMATCH
 - cancel odd/oven delay partition. (haven't seen any necessity, except for understanding code)  
 - weight mapping method: from +1,-1 to 1,0 using rescale function.  
 - TDC: half quantize method. rescale digital number to range[0,1], and scale back to delaysumvalue.  
-- TDC range choise affects test accuracy, finding different interval for delaysum's quantization is under work.
+- TDC range choise affects classification accuracy ->Finding best interval for delay quantization is under work.
