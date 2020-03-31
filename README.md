@@ -37,3 +37,9 @@ UNIDEALELEMENT  CELLMISMATCH/TDCMISMATCH
 - weight mapping method: from +1,-1 to 1,0 using rescale function.  
 - TDC: half quantize method. rescale digital number to range[0,1], and scale back to delaysumvalue.  
 - TDC range choise affects classification accuracy ->Finding best interval for delay quantization is under work.
+
+
+**03.31 UPDATE**
+--
+- K=0.32 best accuracy = 96.70%(the result is greatly impressed by quantization division)
+- next work: set different intervals for odd/even if the in case CELL_ROW is odd, change mismatch for different delay
