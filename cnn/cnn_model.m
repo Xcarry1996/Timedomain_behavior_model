@@ -8,7 +8,7 @@ function pred = cnn_model(Image)
 
     BNLayer2 = BatchNorm(poolLayer1,bin_conv2_mean,bin_conv2_var,bin_conv2_bn_w,bin_conv2_bn_b);
     signLayer2 = sign(BNLayer2);
-    convLayer2 = conv_binary(signLayer2,bin_conv2_w,bin_conv2_b);
+    convLayer2 = conv_tdcim(signLayer2,bin_conv2_w,bin_conv2_b);
     reluLayer2 = relu(convLayer2);
     poolLayer2 = Maxpool(reluLayer2);
 

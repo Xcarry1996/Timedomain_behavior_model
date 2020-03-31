@@ -1,4 +1,4 @@
-function [state,opnum]=myconv(data,kernel)
+function [state,opnum]=conv2d(data,kernel)
 
 
 [data_row,data_col]=size(data);

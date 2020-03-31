@@ -1,27 +1,26 @@
-function convolvedFeatures= conv_basic(images, W, b)
+function feature = conv_basic(images, W, b)
 
-numImages = size(images, 3);
-imageDim = size(images, 1);
-filterDim = size(W,3);
-numFilters = size(W,1);
+image_ch = size(images, 3);
+image_dim = size(images, 1);
+filter_dim = size(W,3);
+filter_num = size(W,1);
 
-convDim = imageDim - filterDim + 1;
+feature_dim = image_dim - filter_dim + 1;
 %initialization
-convolvedFeatures = zeros(convDim, convDim, numFilters);
-for filterNum = 1:numFilters
-    convolvedImage = zeros(convDim, convDim);
+feature = zeros(feature_dim, feature_dim, filter_num);
+%handle one pic and one filter a time
+for filterNum = 1:filter_num
+    convolvedImage = zeros(feature_dim, feature_dim);
     
-    for imageNum = 1:numImages
-        filter = W(filterNum,imageNum ,:, :);
-        filter = squeeze(filter);
-        % Obtain the image
-        im = squeeze(images(:, :, imageNum));
-        convolvedImage_temp = conv_2d(im,filter);
-        convolvedImage=convolvedImage+convolvedImage_temp;
+    for ch = 1:image_ch
+        filter = squeeze(W(filterNum,ch ,:, :));%take 1 filter
+        img = squeeze(images(:, :, ch));%take 1 image
+        conv_temp = conv2d(img,filter);%generate 1 feature
+        convolvedImage = convolvedImage+conv_temp;
     end
     
-    convolvedImage=convolvedImage+b(filterNum);
-    convolvedFeatures(:, :, filterNum) = convolvedImage;
+    convolvedImage = convolvedImage + b(filterNum);
+    feature(:, :, filterNum) = convolvedImage;%load 1 feature
 end
 
 end
