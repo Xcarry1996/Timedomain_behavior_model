@@ -50,3 +50,9 @@ UNIDEALELEMENT  CELLMISMATCH/TDCMISMATCH
 - separate odd/even delay for TDC quantization(only 1 TDC in a column so detect them in seq)
 - add coefficient to delay/cell mismatch(200:150:100ns -> 200/450:150/450:100/450)
 - comments on conv3d and conv2d(different dimension sequence for convolution)
+
+**04.03 UPDATE**
+--
+- creat **cifar10_cnn_training.py**
+- variation/delaymean=0.1, accuracy dorp down from 97% to 84%~92%(each time converge to different value)
+- future: 1.create large bnn/mbnn for infer 2.modify TDC reference file 3.find a trainable bnn, add trainining
